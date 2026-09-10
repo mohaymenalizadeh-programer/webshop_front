@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.full-screen-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-family: 'Vazirmatn', sans-serif;
+  direction: rtl;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* بخش سمت راست (فرم ساده و سفید) */
+.right-panel {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  z-index: 1;
+}
+
+.form-content-wrap {
+  width: 100%;
+  max-width: 520px;
+}
+
+.form-header-badge span {
+  background-color: #fffbeb;
+  color: #d97706;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #fef3c7;
+}
+
+.title-bold {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #111827;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle-faded {
+  color: #6b7280;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+/* استپر گام‌ها */
+.modern-stepper {
+  margin: 1.5rem 0 2rem 0;
+}
+
+.stepper-track {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e5e7eb;
+  height: 6px;
+  border-radius: 10px;
+  margin: 0 1rem;
+}
+
+.stepper-fill {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: #eab308;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.step-node {
+  position: relative;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #e5e7eb;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.step-node.active {
+  border-color: #eab308;
+  background: #eab308;
+  color: #ffffff;
+}
+
+.step-labels-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-top: 0.6rem;
+}
+
+.step-labels-text span.current {
+  color: #d97706;
+  font-weight: 700;
+}
+
+/* ورودی‌ها */
+.custom-field {
+  margin-bottom: 1.5rem;
+}
+
+.custom-field label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon input {
+  width: 100%;
+  height: 56px;
+  padding: 0 3.2rem 0 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+  background-color: #f9fafb;
+}
+
+.input-with-icon input:focus {
+  border-color: #eab308;
+  background-color: #ffffff;
+}
+
+.field-icon-svg {
+  position: absolute;
+  right: 1rem;
+  width: 24px;
+  height: 24px;
+  stroke: #9ca3af;
+}
+
+.ltr-input {
+  direction: ltr;
+  text-align: right;
+}
+
+/* بخش ورودی OTP */
+.otp-boxes-wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  direction: ltr;
+  margin: 2rem 0;
+}
+
+.otp-box-digit {
+  width: 64px;
+  height: 70px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #111827;
+  outline: none;
+  background-color: #f9fafb;
+}
+
+.otp-box-digit:focus {
+  border-color: #eab308;
+  background-color: #ffffff;
+}
+
+.timer-status {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.time-accent {
+  color: #d97706;
+}
+
+.resend-action {
+  background: none;
+  border: none;
+  color: #d97706;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: underline;
+}
+
+/* دکمه اکشن زرد */
+.action-button-yellow {
+  width: 100%;
+  height: 56px;
+  background-color: #eab308;
+  color: #111827;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 0.5rem;
+}
+
+.action-button-yellow:hover {
+  background-color: #ca8a04;
+  color: #ffffff;
+}
+
+.action-button-yellow:active {
+  transform: scale(0.99);
+}
+
+.card-footer-toggle {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.inline-link-btn {
+  background: none;
+  border: none;
+  color: #d97706;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.inline-link-btn:hover {
+  text-decoration: underline;
+}
+
+.left-yellow-panel {
+    flex: 1.2;
+    background-color: #eab308;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 5rem 4rem 3rem;
+    position: relative;
+  }
+
+.yellow-panel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80%;
+  text-align: center;
+  color: #111827;
+}
+
+.panel-top-text h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.panel-top-text p {
+  font-size: 1.15rem;
+  opacity: 0.85;
+}
+
+.main-logo-wrapper {
+  margin: 2rem 0;
+}
+
+.hero-logo-svg {
+  width: 180px;
+  height: 180px;
+  stroke: #111827;
+}
+
+.panel-bottom-text h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.panel-bottom-text p {
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+/* پاسخگویی در صفحه‌های کوچک */
+@media (max-width: 1024px) {
+  .full-screen-container {
+    flex-direction: column-reverse;
+    overflow-y: auto;
+  }
+
+  .left-yellow-panel {
+    clip-path: none;
+    flex: none;
+    padding: 3rem 1.5rem;
+    width: 100%;
+  }
+
+  .yellow-panel-content {
+    height: auto;
+    gap: 2rem;
+  }
+
+  .hero-logo-svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .right-panel {
+    flex: none;
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+}

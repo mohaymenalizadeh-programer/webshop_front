@@ -1,0 +1,155 @@
+.coniners {
+    background: rgb(20 20 20 / 93%);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: -84px auto 0 auto;
+    gap: clamp(10px, 2.5vw, 60px);
+    padding: clamp(14px, 2vw, 26px) clamp(12px, 3vw, 40px);
+    width: 92%;
+    max-width: 1300px;
+    box-sizing: border-box;
+    margin-top: 100px;
+  }
+  
+  .icon-guarantee,
+  .icon-price,
+  .icon-shipping,
+  .icon-support {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(6px, 1vw, 16px);
+    flex: 1 1 180px;
+    min-width: 0;
+  }
+  
+  .icon-guarantee svg,
+  .icon-price svg,
+  .icon-shipping svg,
+  .icon-support svg {
+    width: clamp(30px, 3.4vw, 56px);
+    height: clamp(30px, 3.4vw, 56px);
+    flex-shrink: 0;
+  }
+  
+  .text_icons {
+    text-align: right;
+    margin-top: 0;
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+  
+  .pargrafone {
+    font-size: clamp(12px, 1.5vw, 21px);
+    color: wheat;
+    margin: 0;
+  }
+  
+  .pargraftwo {
+    margin-top: clamp(4px, 0.8vw, 14px);
+    font-size: clamp(9.5px, 1vw, 16px);
+    color: #898989;
+    white-space: normal;
+    word-break: break-word;
+    margin-bottom: 0;
+  }
+  
+
+  @media (max-width: 1200px) {
+    .coniners {
+      gap: clamp(8px, 2vw, 30px);
+    }
+  }
+  
+
+  @media (max-width: 1000px) {
+    .coniners {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px 8px;
+      margin-top: -40px;
+      width: 96%;
+      padding: 18px 10px;
+      margin-top: 60px;
+    }
+  
+    .icon-guarantee,
+    .icon-price,
+    .icon-shipping,
+    .icon-support {
+      flex: unset;
+      gap: 8px;
+      min-width: 0;
+    }
+  
+    .text_icons {
+      text-align: right;
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+  
+    .pargrafone {
+      white-space: normal;
+      word-break: break-word;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    .coniners {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 6px;
+      padding: 14px 8px;
+      width: 94%;
+      margin-top: 60px;
+    }
+  
+    .icon-guarantee,
+    .icon-price,
+    .icon-shipping,
+    .icon-support {
+      gap: 6px;
+      align-items: center;
+    }
+  
+    .icon-guarantee svg,
+    .icon-price svg,
+    .icon-shipping svg,
+    .icon-support svg {
+      width: 28px;
+      height: 28px;
+    }
+  
+    .pargrafone {
+      font-size: 11px;
+      white-space: normal;
+      word-break: break-word;
+    }
+  
+    .pargraftwo {
+      font-size: 8.5px;
+      margin-top: 3px;
+    }
+  }
+  
+
+  @media (max-width: 340px) {
+    .coniners {
+      grid-template-columns: 1fr;
+    }
+  
+    .icon-guarantee,
+    .icon-price,
+    .icon-shipping,
+    .icon-support {
+      justify-content: flex-start;
+    }
+  }

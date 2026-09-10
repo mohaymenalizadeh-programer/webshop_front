@@ -1,0 +1,382 @@
+
+
+.account-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 40px 16px;
+  color: #2c3e50;
+  direction: rtl;
+}
+
+.account-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+
+.account-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.account-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  padding: 28px;
+}
+
+.card-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 24px 0;
+  padding-bottom: 12px;
+}
+
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 36px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-box .label {
+  font-size: 15px;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.info-box .value {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.phone-value {
+  direction: ltr;
+  text-align: right;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.btn-edit-profile {
+  background: transparent;
+  border: none;
+  color: #008b9b;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-edit-profile:hover {
+  background-color: #e6f7f9;
+}
+
+/* جدول سفارشات */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.orders-table th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-weight: 500;
+  padding: 14px 12px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.orders-table td {
+  padding: 14px 12px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  color: #334155;
+}
+
+.orders-footer {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.link-all-orders {
+  color: #008b9b;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link-all-orders:hover {
+  text-decoration: underline;
+}
+
+/* منوی سمت چپ (سایدبار) */
+.account-sidebar {
+  width: 280px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  padding: 20px;
+}
+
+.sidebar-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.avatar-icon {
+  width: 52px;
+  height: 52px;
+  background-color: #e6f7f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.user-phone {
+  font-size: 14px;
+  color: #64748b;
+  direction: ltr;
+  text-align: right;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  color: #008b9b;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  text-align: right;
+}
+
+.nav-item:hover {
+  background-color: #f1f5f9;
+}
+
+.logout-btn {
+  color: #008b9b;
+}
+
+/* مودال ویرایش */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-box {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 28px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.form-field input {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.form-field input:focus {
+  border-color: #008b9b;
+}
+
+.disabled-input {
+  background-color: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+  direction: ltr;
+  text-align: right;
+}
+
+.form-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #334155;
+  cursor: pointer;
+}
+
+.form-checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: #008b9b;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn-confirm {
+  background-color: #008b9b;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-confirm:hover {
+  background-color: #007380;
+}
+
+.btn-close {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.account-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  font-size: 18px;
+  color: #64748b;
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 850px) {
+  .account-wrapper {
+    flex-direction: column-reverse;
+  }
+  .account-sidebar {
+    width: 100%;
+  }
+  .info-grid, .form-row {
+    grid-template-columns: 1fr;
+  }
+}

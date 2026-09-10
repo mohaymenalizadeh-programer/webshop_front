@@ -1,0 +1,583 @@
+.callme-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    color: #17191d;
+    direction: rtl;
+    font-family: inherit;
+  }
+  
+  .callme-page *,
+  .callme-page *::before,
+  .callme-page *::after {
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  .callme-container {
+    width: min(1150px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+  
+  .callme-hero {
+    position: relative;
+    height: 205px;
+    overflow: hidden;
+    background: #f3f4f5;
+    border-bottom: 1px solid #ececee;
+  }
+  
+  .callme-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .16;
+  }
+  
+  .callme-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,.97) 0%,
+      rgba(255,255,255,.9) 47%,
+      rgba(255,255,255,.35) 100%
+    );
+  }
+  
+  .callme-hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+  }
+  
+  .callme-breadcrumb {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #96999e;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  
+  .callme-breadcrumb svg {
+    width: 13px;
+    height: 13px;
+    fill: none;
+    stroke: #9da0a5;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .callme-breadcrumb strong {
+    color: #34373c;
+    font-weight: 800;
+  }
+  
+  .callme-hero-text {
+    position: absolute;
+    top: 75px;
+    right: 0;
+  }
+  
+  .callme-hero-text h1 {
+    margin: 0;
+    color: #17191d;
+    font-size: 38px;
+    line-height: 1.35;
+    font-weight: 950;
+    letter-spacing: -1px;
+  }
+  
+  .callme-hero-text p {
+    margin: 8px 0 0;
+    color: #777b82;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .callme-hero-text span {
+    display: block;
+    width: 34px;
+    height: 4px;
+    margin-top: 14px;
+    border-radius: 10px;
+    background: #ffc400;
+  }
+  
+  .callme-content {
+    padding: 28px 0 65px;
+    background: #fff;
+  }
+  
+  .callme-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(400px, .82fr);
+    gap: 24px;
+    align-items: start;
+  }
+  
+  .callme-left {
+    min-width: 0;
+  }
+  
+  .callme-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #e6e7e9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  .callme-info-card {
+    min-height: 108px;
+    padding: 20px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    color: inherit;
+    text-decoration: none;
+    background: #fff;
+    transition: .2s ease;
+  }
+  
+  .callme-info-card:nth-child(odd) {
+    border-left: 1px solid #e8e9eb;
+  }
+  
+  .callme-info-card:nth-child(-n+2) {
+    border-bottom: 1px solid #e8e9eb;
+  }
+  
+  .callme-info-card:hover {
+    background: #fffdf5;
+  }
+  
+  .callme-icon {
+    width: 39px;
+    height: 39px;
+    min-width: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ffc400;
+    color: #17191d;
+  }
+  
+  .callme-icon svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .callme-info-card h3 {
+    margin: 0 0 5px;
+    color: #202328;
+    font-size: 13px;
+    font-weight: 900;
+  }
+  
+  .callme-info-card strong {
+    display: block;
+    color: #292d32;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 800;
+    direction: rtl;
+  }
+  
+  .callme-info-card p {
+    margin: 3px 0 0;
+    color: #8a8e94;
+    font-size: 9px;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  
+  .callme-map {
+    position: relative;
+    height: 275px;
+    margin-top: 16px;
+    overflow: hidden;
+    border: 1px solid #e5e6e8;
+    border-radius: 12px;
+    background: #e9eaeb;
+  }
+  
+  .callme-map > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .callme-map-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 42px 20px 20px;
+    pointer-events: none;
+  }
+  
+  .callme-location-card {
+    min-width: 250px;
+    padding: 13px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 9px;
+    background: rgba(255,255,255,.96);
+    box-shadow: 0 8px 25px rgba(0,0,0,.1);
+    pointer-events: auto;
+  }
+  .callme-location-pin {
+    width: 37px;
+    height: 37px;
+    min-width: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ffc400;
+    color: #181a1e;
+  }
+  
+  .callme-location-pin svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .callme-location-card strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #1c1f23;
+    font-size: 18px;
+    font-weight: 900;
+  }
+  
+  .callme-location-card span {
+    display: block;
+    color: #777b81;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  
+  .callme-map-button {
+    height: 40px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 8px;
+    background: #ffc400;
+    color: #181a1e;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 900;
+    pointer-events: auto;
+    transition: .2s ease;
+  }
+  
+  .callme-map-button:hover {
+    background: #eab400;
+    transform: translateY(-1px);
+  }
+  
+  .callme-map-button svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .callme-form-box {
+    padding: 28px 27px 26px;
+    border: 1px solid #e4e5e7;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 5px 22px rgba(24,27,31,.035);
+  }
+  
+  .callme-form-heading h2 {
+    margin: 0;
+    color: #202328;
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 950;
+  }
+  
+  .callme-form-heading p {
+    max-width: 420px;
+    margin: 7px 0 22px;
+    color: #858990;
+    font-size: 13px;
+    line-height: 2;
+    font-weight: 500;
+  }
+  
+  .callme-form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  
+  .callme-field {
+    display: block;
+  }
+  
+  .callme-field > span {
+    display: block;
+    margin: 0 2px 7px;
+    color: #383c42;
+    font-size: 15px;
+    font-weight: 850;
+  }
+  
+  .callme-field > div {
+    position: relative;
+  }
+  
+  .callme-field input,
+  .callme-field select,
+  .callme-field textarea {
+    width: 100%;
+    border: 1px solid #e0e1e3;
+    outline: 0;
+    border-radius: 8px;
+    background: #fff;
+    color: #292d32;
+    font-family: inherit;
+    font-size: 10px;
+    transition: .2s ease;
+  }
+  
+  .callme-field input,
+  .callme-field select {
+    height: 46px;
+    padding: 0 43px 0 14px;
+  }
+  
+  .callme-field textarea {
+    min-height: 108px;
+    padding: 13px 43px 13px 14px;
+    resize: vertical;
+    line-height: 1.9;
+  }
+  
+  .callme-field input::placeholder,
+  .callme-field textarea::placeholder {
+    color: #afb2b7;
+  }
+  
+  .callme-field select {
+    appearance: none;
+    cursor: pointer;
+    color: #96999f;
+  }
+  
+  .callme-field input:focus,
+  .callme-field select:focus,
+  .callme-field textarea:focus {
+    border-color: #f1bf00;
+    box-shadow: 0 0 0 3px rgba(255,196,0,.1);
+  }
+  
+  .callme-field > div > svg {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    fill: none;
+    stroke: #676b71;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+  }
+  
+  .callme-message > div > svg {
+    top: 17px;
+    transform: none;
+  }
+  
+  .callme-submit {
+    width: 100%;
+    height: 47px;
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 8px;
+    background: #ffc400;
+    color: #181a1e;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 950;
+    cursor: pointer;
+    transition: .2s ease;
+  }
+  
+  .callme-submit:hover {
+    background: #eab400;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 17px rgba(234,180,0,.18);
+    font-size: 15px;
+  }
+  
+  .callme-submit:active {
+    transform: translateY(0);
+  }
+  
+  .callme-submit svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  @media (max-width: 1000px) {
+    .callme-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .callme-form-box {
+      order: -1;
+    }
+  
+    .callme-form-heading p {
+      max-width: 650px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .callme-container {
+      width: min(100% - 24px, 1150px);
+    }
+  
+    .callme-hero {
+      height: 175px;
+    }
+  
+    .callme-hero-text {
+      top: 68px;
+    }
+  .callme-hero-text h1 {
+      font-size: 30px;
+    }
+  
+    .callme-hero-text p {
+      font-size: 11px;
+    }
+  
+    .callme-content {
+      padding-top: 18px;
+    }
+  
+    .callme-info-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .callme-info-card:nth-child(odd) {
+      border-left: 0;
+    }
+  
+    .callme-info-card:nth-child(-n+2) {
+      border-bottom: 0;
+    }
+  
+    .callme-info-card:not(:last-child) {
+      border-bottom: 1px solid #e8e9eb;
+    }
+  
+    .callme-map {
+      height: 245px;
+    }
+  
+    .callme-location-card {
+      min-width: 220px;
+    }
+  
+    .callme-form-box {
+      padding: 22px 17px;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .callme-breadcrumb {
+      top: 19px;
+      font-size: 8px;
+    }
+  
+    .callme-hero-text {
+      top: 58px;
+    }
+  
+    .callme-hero-text h1 {
+      font-size: 27px;
+    }
+  
+    .callme-hero-text p {
+      font-size: 9px;
+    }
+  
+    .callme-info-card {
+      padding: 17px 15px;
+    }
+  
+    .callme-info-card h3 {
+      font-size: 11px;
+    }
+  
+    .callme-info-card strong {
+      font-size: 12px;
+    }
+  
+    .callme-form-heading h2 {
+      font-size: 19px;
+    }
+  
+    .callme-map-overlay {
+      padding: 25px 12px 12px;
+    }
+  
+    .callme-location-card {
+      min-width: 195px;
+      padding: 10px;
+    }
+  
+    .callme-location-card span {
+      font-size: 8px;
+    }
+  }

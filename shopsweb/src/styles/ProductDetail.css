@@ -1,0 +1,145 @@
+.product-detail-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 15px;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  .prod-top-box {
+    display: flex;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .prod-img-box img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+  }
+  
+  .prod-title-box {
+    flex: 1;
+  }
+  
+  .prod-title-box h2 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .prod-buy-box {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 200px;
+    align-items: center;
+  }
+  
+  .prod-price {
+    font-weight: bold;
+    font-size: 16px;
+    color: #222;
+  }
+  
+  .prod-cart-btn {
+    background: #ff4757;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .prod-comments-box {
+    margin-top: 30px;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .comment-desc {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 450px;
+  }
+  
+  .comment-form input[type="text"],
+  .comment-form input[type="file"],
+  .comment-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .comment-form textarea {
+    height: 90px;
+  }
+  
+  .submit-comment-btn {
+    background: #2ed573;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .success-msg {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .comments-list {
+    margin-top: 25px;
+  }
+  
+  .comment-item {
+    display: flex;
+    gap: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    align-items: center;
+  }
+  
+  .user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .comment-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .comment-item p {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .no-comment {
+    color: #888;
+    font-size: 13px;
+  }
