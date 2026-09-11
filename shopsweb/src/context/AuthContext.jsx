@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        const response = await fetch('http://api.yadakkan.ir/apiaccounts/profile/', {
+        const response = await fetch('https://api.yadakkan.ir//apiaccounts/profile/', {
           method: 'GET',
           credentials: 'include',
         });
@@ -52,7 +52,7 @@ export function AuthProvider({ children }) {
 
   const logout = async () => {
     try {
-      await fetch('http://api.yadakkan.ir/apiaccounts/logout/', {
+      await fetch('https://api.yadakkan.ir//apiaccounts/logout/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

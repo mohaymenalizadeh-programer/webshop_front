@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import SEO from './SEO.jsx';
 import Navbarpage from './Navbarpage.jsx';
-const API_BASE = "http://api.yadakkan.ir/api";
+const API_BASE = "https://api.yadakkan.ir//api";
 
 function getCookie(name) {
   let cookieValue = null;
@@ -105,7 +105,7 @@ export default function ProductDetail() {
     "brand": { "@type": "Brand", "name": product.brand_name || "یدک‌کان" },
     "offers": {
       "@type": "Offer",
-      "url": `https://yadakkan.ir/product/${slug}`,
+      "url": `https://api.yadakkan.ir//product/${slug}`,
       "priceCurrency": "IRR",
       "price": product.price,
       "availability": "https://schema.org/InStock"

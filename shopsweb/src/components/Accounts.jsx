@@ -5,8 +5,8 @@ import { useAuth } from '../context/AuthContext';
 import '../styles/Accounts.css';
 import Navbar from "./Navbarpage.jsx";
 
-const API_BASE_URL = "http://api.yadakkan.ir/apiaccounts/";
-const ORDERS_API_URL = "http://api.yadakkan.ir/api/orders/";
+const API_BASE_URL = "https://api.yadakkan.ir//apiaccounts/";
+const ORDERS_API_URL = "https://api.yadakkan.ir//api/orders/";
 
 function getCookie(name) {
   let cookieValue = null;
@@ -25,7 +25,7 @@ function getCookie(name) {
 
 export default function Accounts() {
   const navigate = useNavigate();
-  const { user, isLoggedIn, logout } = useAuth(); 
+  const { user, isLoggedIn, logout, loading: authLoading } = useAuth(); 
 
   const phone = user?.phone || '';
 
@@ -45,6 +45,10 @@ export default function Accounts() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // تا زمانی که AuthContext دارد وضعیت لودینگ اولیه را چک می‌کند، هیچ کاری نکنیم
+    if (authLoading) return;
+
+    // اگر لودینگ تمام شد و قطعی فهمیدیم کاربر لاگین نیست، هدایت به صفحه ورود
     if (!isLoggedIn) {
       navigate('/authform');
       return;
@@ -78,7 +82,7 @@ export default function Accounts() {
     };
 
     fetchData();
-  }, [isLoggedIn, navigate]);
+  }, [isLoggedIn, authLoading, navigate]);
 
   const handleLogout = async () => {
     await logout();
@@ -116,7 +120,7 @@ export default function Accounts() {
     }
   };
 
-  if (loading) {
+  if (authLoading || loading) {
     return <div className="account-loading">در حال دریافت اطلاعات...</div>;
   }
 

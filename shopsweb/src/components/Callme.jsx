@@ -22,7 +22,7 @@ export default function Callme() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://api.yadakkan.ir/api/contact/", {
+      const response = await fetch("https://api.yadakkan.ir//api/contact/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
