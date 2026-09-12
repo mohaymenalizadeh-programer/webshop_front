@@ -17,7 +17,9 @@
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
   padding-bottom: 4px;
-  justify-content: center;
+  justify-content: flex-start;
+  /* اضافه کردن این خط باعث می‌شود ترتیب RTL از سمت راست شروع شود */
+  direction: rtl; 
 }
 
 .category-scroll::-webkit-scrollbar {
@@ -55,20 +57,24 @@
 }
 
 .category-image {
-  width: 139px;
-  height: 103px;
-  display: flex;
+  width: 127px;
+  height: 120px;
+  display: flex
+;
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
+  padding: 0 4px;
+  box-sizing: border-box;
 }
 
 .category-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   pointer-events: none;
   -webkit-user-drag: none;
+  border-radius: 10px;
 }
 
 .category-title {
@@ -116,7 +122,7 @@
     width: 150px;
     min-height: 180px;
   }
-  .category-image,
+
   .category-icon {
     width: 76px;
     height: 76px;
@@ -136,7 +142,6 @@
     min-height: 155px;
     padding: 10px 8px;
   }
-  .category-image,
   .category-icon {
     width: 64px;
     height: 64px;
@@ -152,7 +157,6 @@
     width: 110px;
     min-height: 140px;
   }
-  .category-image,
   .category-icon {
     width: 56px;
     height: 56px;

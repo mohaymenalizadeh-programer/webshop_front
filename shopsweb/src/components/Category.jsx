@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/Category.css";
 
-const API_BASE_URL = "https://api.yadakkan.ir//api";
+const API_BASE_URL = "https://api.yadakkan.ir/api";
 
 export default function Category() {
   const [categories, setCategories] = useState([]);
@@ -32,6 +32,25 @@ export default function Category() {
     <div className="category-wrapper" dir="rtl">
       <div className="category-scroll">
 
+        {/* ۱. اول دکمه «همه دسته‌ها» (SVG) را گذاشتیم تا در حالت RTL بنشیند سمت راست */}
+        <div
+          className="category-item category-item--all"
+          onClick={() => navigate("/shops")}
+          style={{ cursor: "pointer" }}
+        >
+          <div className="category-icon">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="20" height="20" rx="6" fill="none" stroke="#F2F2F2" strokeWidth="3.2" />
+              <rect x="36" y="8" width="20" height="20" rx="6" fill="none" stroke="#C9A15B" strokeWidth="3.2" />
+              <rect x="8" y="36" width="20" height="20" rx="6" fill="none" stroke="#F2F2F2" strokeWidth="3.2" />
+              <rect x="36" y="36" width="20" height="20" rx="6" fill="none" stroke="#C9A15B" strokeWidth="3.2" />
+            </svg>
+          </div>
+          <span className="category-title">همه دسته‌ها</span>
+          <span className="category-underline"></span>
+        </div>
+
+        {/* ۲. سپس بقیه دسته‌بندی‌ها را مپ کردیم تا سمت چپ آن قرار بگیرند */}
         {categories.map((cat) => (
           <div
             className="category-item"
@@ -49,23 +68,6 @@ export default function Category() {
             <span className="category-underline"></span>
           </div>
         ))}
-
-        <div
-          className="category-item category-item--all"
-          onClick={() => navigate("/shops")}
-          style={{ cursor: "pointer" }}
-        >
-          <div className="category-icon">
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="8" width="20" height="20" rx="6" fill="none" stroke="#F2F2F2" strokeWidth="3.2" />
-              <rect x="36" y="8" width="20" height="20" rx="6" fill="none" stroke="#C9A15B" strokeWidth="3.2" />
-              <rect x="8" y="36" width="20" height="20" rx="6" fill="none" stroke="#F2F2F2" strokeWidth="3.2" />
-              <rect x="36" y="36" width="20" height="20" rx="6" fill="none" stroke="#C9A15B" strokeWidth="3.2" />
-            </svg>
-          </div>
-          <span className="category-title">همه دسته‌ها</span>
-          <span className="category-underline"></span>
-        </div>
 
       </div>
     </div>

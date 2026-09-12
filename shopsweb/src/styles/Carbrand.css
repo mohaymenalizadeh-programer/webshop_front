@@ -27,7 +27,7 @@
     flex: 0 0 160px;
     border: 1px solid #ddd;
     border-radius: 16px;
-    padding: 25px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,10 +37,11 @@
   }
   
   .brand-card img {
-    width: 100px;
+    object-fit: cover;
+    width: 182px;
     height: 100px;
-    object-fit: contain;
     margin-bottom: 15px;
+    border-radius: 12px;
   }
   
   .brand-card p {

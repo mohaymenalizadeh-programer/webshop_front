@@ -3,7 +3,7 @@ import '../styles/Whyus.css'
 export default function Whyus() {
   return (
     <div>
-          <div className="coniners">
+          <div className="dgjkyd">
       <div className="icon-guarantee">
       <div className="text_icons">
           <p className="pargrafone">ضمانت و اصالت کالا</p>

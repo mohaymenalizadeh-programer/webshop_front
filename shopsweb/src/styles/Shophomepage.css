@@ -76,7 +76,6 @@
 }
 
 .product-card {
-  flex: 0 0 290px;
   background: #fff;
   border-radius: 22px;
   padding: 18px;
@@ -332,9 +331,8 @@
 
 @media (max-width: 768px) {
   .product-card {
-    flex: 0 0 240px;
   }
   .img-box {
-    height: 170px;
+    height: 182px;
   }
 }
