@@ -75,6 +75,7 @@ export default function Footer() {
           <a href="#">پشتیبانی آنلاین</a>
         </div>
 
+        {/* ستون آخر که متن‌های درباره ما و اینماد بزرگ در کنار هم قرار می‌گیرند */}
         <div className="footer-column footer-about">
           <h3>درباره یدک‌کان</h3>
 
@@ -89,7 +90,6 @@ export default function Footer() {
           </p>
 
           <div className="footer-socials">
-
             <a href="#" aria-label="اینستاگرام یدک‌کان" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24">
                 <rect x="4" y="4" width="16" height="16" rx="4" />
@@ -97,45 +97,54 @@ export default function Footer() {
                 <circle cx="17.2" cy="6.8" r="1" />
               </svg>
             </a>
-
             <a href="#" aria-label="تلگرام یدک‌کان" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24">
                 <path d="m21 4-3.1 16-6.1-4.6-3.5 3.3.6-5.2L18 7.1 9.4 12l-4.2-1.5L21 4Z" />
                 <path d="m11.8 15.4 2.1-2.1" />
               </svg>
             </a>
-
             <a href="#" aria-label="واتساپ یدک‌کان" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24">
                 <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z" />
                 <path d="M9 8.5c.3-.3.6-.3.9 0l.8 1c.2.3.2.6 0 .9l-.5.5c.7 1.2 1.5 2 2.7 2.7l.5-.5c.3-.2.6-.2.9 0l1 .8c.3.3.3.6 0 .9-.5.6-1.1.9-1.8.8-2.9-.4-5.9-3.4-6.3-6.3-.1-.7.2-1.3.8-1.8Z" />
               </svg>
             </a>
-
             <a href="#" aria-label="لینکدین یدک‌کان" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24">
                 <rect x="4" y="4" width="16" height="16" rx="3" />
                 <path d="M8 10v6M8 8v.1M11 16v-3.2c0-1.8 2.8-2 2.8 0V16M11 10v6" />
               </svg>
             </a>
-
           </div>
+
+          {/* اینماد بزرگ منتقل‌شده به داخل بخش بالا */}
+          <div className="enamad-container-large">
+            <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=7735423&Code=rSfaZYyKl7vKe2n1NZTZM9Hd8ieITr3O">
+              <img 
+                className="enamad-img"
+                referrerpolicy="origin" 
+                src="https://trustseal.enamad.ir/logo.aspx?id=7735423&Code=rSfaZYyKl7vKe2n1NZTZM9Hd8ieITr3O" 
+                alt="اینماد" 
+                style={{ cursor: 'pointer' }} 
+                code="rSfaZYyKl7vKe2n1NZTZM9Hd8ieITr3O" 
+              />
+            </a>
+          </div>
+
         </div>
       </div>
 
-      <div className="footer-bottom">
 
+      <div className="footer-bottom">
         <div className="footer-copyright">
           تمام حقوق این سایت متعلق به یدک‌کان می‌باشد.
         </div>
-
         <div className="footer-bottom-brand">
           <strong>یدک‌کان</strong>
           <span>فروشگاه تخصصی قطعات خودرو</span>
         </div>
-</div>
+      </div>
     </footer>
     </div>
-
   );
 }
