@@ -5,8 +5,8 @@ import { useAuth } from '../context/AuthContext';
 import '../styles/Accounts.css';
 import Navbar from "./Navbarpage.jsx";
 
-const API_BASE_URL = "https://api.yadakkan.ir/apiaccounts/";
-const ORDERS_API_URL = "https://api.yadakkan.ir/api/orders/";
+const API_BASE_URL = "https://api.yadakkan.ir//apiaccounts/";
+const ORDERS_API_URL = "https://api.yadakkan.ir//api/orders/";
 
 function getCookie(name) {
   let cookieValue = null;
