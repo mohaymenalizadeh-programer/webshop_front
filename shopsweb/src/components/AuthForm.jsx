@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import SEO from './SEO.jsx';
 import '../styles/AuthForm.css';
-const API_BASE_URL = 'https://api.yadakkan.ir//apiaccounts';
+const API_BASE_URL = 'https://webflow.pythonanywhere.com//apiaccounts';
 
 function getCookie(name) {
   let cookieValue = null;
