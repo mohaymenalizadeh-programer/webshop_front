@@ -137,7 +137,7 @@ export default function CartPage() {
                           ? "/images/products/product-placeholder.jpg"
                           : item.product_image.startsWith('http')
                             ? item.product_image
-                            : `https://api.yadakkan.ir/${item.product_image.startsWith('/') ? '' : '/'}${item.product_image}`
+                            : `https://webflow.pythonanywhere.com/${item.product_image.startsWith('/') ? '' : '/'}${item.product_image}`
                       }
                       alt={item.product_title}
                       style={{
