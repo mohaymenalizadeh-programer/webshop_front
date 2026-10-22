@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/Carbrand.css';
 
-const API_URL = "https://api.yadakkan.ir//api";
+const API_URL = "https://webflow.pythonanywhere.com//api";
 
 export default function Carbrand() {
   const [brands, setBrands] = useState([]);
@@ -49,7 +49,7 @@ export default function Carbrand() {
                 src={
                   brand.imagesbrand.startsWith('http')
                     ? brand.imagesbrand
-                    : `https://api.yadakkan.ir/${brand.imagesbrand.startsWith('/') ? '' : '/'}${brand.imagesbrand}`
+                    : `https://webflow.pythonanywhere.com/${brand.imagesbrand.startsWith('/') ? '' : '/'}${brand.imagesbrand}`
                 }
                 alt={brand.title}
               />
