@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import '../styles/Shophomepage.css';
 import axios from "axios";
 
-const API_URL = "https://api.yadakkan.ir//api";
+const API_URL = "https://webflow.pythonanywhere.com//api";
 
 const api = axios.create({
   baseURL: API_URL,
@@ -138,7 +138,7 @@ export default function Shophomepage() {
                           ? "/images/products/product-placeholder.jpg"
                           : item.image1.startsWith('http') 
                             ? item.image1 
-                            : `https://api.yadakkan.ir//media/${item.image1.replace(/^\/+/, '')}`
+                            : `https://webflow.pythonanywhere.com//media/${item.image1.replace(/^\/+/, '')}`
                       } 
                       alt={item.title} 
                     />
