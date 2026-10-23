@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const SITE_NAME = "یدک‌کان";
-const SITE_URL = "https://api.yadakkan.ir";
+const SITE_URL = "https://webflow.pythonanywhere.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/images/og-default.jpg`;
 const TWITTER_HANDLE = "";
 
