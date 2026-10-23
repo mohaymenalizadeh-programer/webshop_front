@@ -5,7 +5,7 @@ import "../styles/Shops.css";
 import Navbarpage from './Navbarpage.jsx';
 import SEO from './SEO.jsx';
 
-const API_BASE_URL = "https://api.yadakkan.ir//api";
+const API_BASE_URL = "https://webflow.pythonanywhere.com//api";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
