@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/webshop_front/', 
+  base: '/', // این خط را روی '/' بگذارید چون دامنه اختصاصی دارید
 })
