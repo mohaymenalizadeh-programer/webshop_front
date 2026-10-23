@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/Category.css";
 
-const API_BASE_URL = "https://api.yadakkan.ir/api";
+const API_BASE_URL = "https://webflow.pythonanywhere.com/api";
 
 export default function Category() {
   const [categories, setCategories] = useState([]);
@@ -60,7 +60,7 @@ export default function Category() {
           >
             <div className="category-image">
               <img
-                src={cat.imgcategory ? (cat.imgcategory.startsWith("http") ? cat.imgcategory : `https://api.yadakkan.ir/${cat.imgcategory}`) : "/images/products/product-placeholder.jpg"}
+                src={cat.imgcategory ? (cat.imgcategory.startsWith("http") ? cat.imgcategory : `https://webflow.pythonanywhere.com/${cat.imgcategory}`) : "/images/products/product-placeholder.jpg"}
                 alt={cat.title}
               />
             </div>
