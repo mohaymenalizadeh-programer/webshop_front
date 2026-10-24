@@ -16,7 +16,7 @@ function getCookie(name) {
 }
 
 const api = axios.create({
-  baseURL: "https://webflow.pythonanywhere.com//api",
+  baseURL: "https://webflow.pythonanywhere.com/api",
   withCredentials: true, 
   headers: {
     "Content-Type": "application/json",
