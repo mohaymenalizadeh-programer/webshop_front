@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import '../styles/Shophomepage.css';
 import axios from "axios";
 
-const API_URL = "https://webflow.pythonanywhere.com//api";
+const API_URL = "https://webflow.pythonanywhere.com/api";
 
 const api = axios.create({
   baseURL: API_URL,
