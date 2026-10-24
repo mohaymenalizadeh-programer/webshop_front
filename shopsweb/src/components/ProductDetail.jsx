@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import SEO from './SEO.jsx';
 import Navbarpage from './Navbarpage.jsx';
-const API_BASE = "https://webflow.pythonanywhere.com//api";
+const API_BASE = "https://webflow.pythonanywhere.com/api";
 
 function getCookie(name) {
   let cookieValue = null;
