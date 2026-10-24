@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/Carbrand.css';
 
-const API_URL = "https://webflow.pythonanywhere.com//api";
+const API_URL = "https://webflow.pythonanywhere.com/api";
 
 export default function Carbrand() {
   const [brands, setBrands] = useState([]);
