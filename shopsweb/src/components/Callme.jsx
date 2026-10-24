@@ -22,7 +22,7 @@ export default function Callme() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://webflow.pythonanywhere.com//api/contact/", {
+      const response = await fetch("https://webflow.pythonanywhere.com/api/contact/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
